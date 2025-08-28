@@ -181,7 +181,6 @@
         
     </script>
 
-    <h4>문서객체 생성/삭제</h4>
     <script>
         //문서객체 생성/삭제
         const gg = document.querySelector('.city > li:nth-child(1) > ol');
@@ -199,8 +198,38 @@
         // 이동
         const nodes = gs.getElementsByTagName('li');
 
+        const sw = nodes[1];
+        const mp = nodes[2];
+        const by = nodes[3];
+        const wj = nodes[4];
+        const pj = nodes[5];
 
+        gg.append(sw);
+        jl.prepend(mp);
+        cc.append(by);
+        gw.append(wj);  // 아래쪽에서 넣기
+        gg.prepend(pj); // 위쪽에서 넣기
 
+    </script>
+
+    <h4>문서객체 생성/삭제</h4>
+
+    <section>
+        <h5>삭제할 태그</h5>
+    </section>
+
+    <script>
+        //문서객체 생성/삭제
+        const section = document.getElementsByTagName('section')[0]; // name 속성에 관함
+
+        const newImg = document.createElement('img');
+        newImg.src = './images/flower1.jpg';
+        newImg.alt = '벚꽃';
+
+        section.append(newImg);
+
+        const h5 = document.getElementsByTagName('h5')[0];
+        h5.remove();
     </script>
 
 </body>
